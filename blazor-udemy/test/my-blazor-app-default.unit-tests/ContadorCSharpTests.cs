@@ -1,0 +1,50 @@
+using System.Linq;
+using my_blazor_app_default.Components.Pages;
+
+namespace my_blazor_app_default.unit_tests;
+
+/// <summary>
+/// These tests are written entirely in C#.
+/// Learn more at https://bunit.dev/docs/getting-started/writing-tests.html#creating-basic-tests-in-cs-files
+/// </summary>
+[FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
+public class ContadorCSharpTests : BunitContext
+{
+	[Test]
+	public void ContadorStartsAtZero()
+	{
+		// Arrange
+		var cut = Render<Contador>();
+
+		// Assert that content of the paragraph shows counter at zero
+		cut.Find("p").MarkupMatches("<p>Contador atual : 0</p>");
+	}
+
+	[Test]
+	public void ClickingButtonIncrementsContador()
+	{
+		// Arrange
+		var cut = Render<Contador>();
+
+		// Act - click button to increment counter
+		var buttons = cut.FindAll("button");
+		buttons.Single(s => s.ClassName!.Contains("btn-primary")).Click();
+
+		// Assert that the counter was incremented
+		cut.Find("p").MarkupMatches("<p>Contador atual : 1</p>");
+	}
+
+	[Test]
+	public void ClickingButtonDecrementsContador()
+	{
+		// Arrange
+		var cut = Render<Contador>();
+
+		// Act - click button to decrement counter
+		var buttons = cut.FindAll("button");
+		buttons.Single(s => s.ClassName!.Contains("btn-danger")).Click();
+
+		// Assert that the counter was decremented
+		cut.Find("p").MarkupMatches("<p>Contador atual : -1</p>");
+	}
+}

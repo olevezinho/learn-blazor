@@ -1,0 +1,12 @@
+﻿@* 
+Here, all the routes are configured for the Blazor application. 
+
+In line 7, the `Router` component is defined, specifying the application assembly and any additional assemblies to include for routing.
+The router is referencing the server and client assemblies for routing purposes.
+*@
+<Router AppAssembly="typeof(Program).Assembly" AdditionalAssemblies="new[] { typeof(Client._Imports).Assembly }">
+    <Found Context="routeData">
+        <RouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)" />
+        <FocusOnNavigate RouteData="routeData" Selector="h1" />
+    </Found>
+</Router>

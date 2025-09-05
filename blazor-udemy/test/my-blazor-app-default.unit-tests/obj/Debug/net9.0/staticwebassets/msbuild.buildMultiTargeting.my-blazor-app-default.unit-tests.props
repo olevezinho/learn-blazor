@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\my-blazor-app-default.unit-tests.props" />
+</Project>

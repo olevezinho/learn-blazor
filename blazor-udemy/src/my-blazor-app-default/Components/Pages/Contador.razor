@@ -1,0 +1,23 @@
+﻿@page "/contador"
+@rendermode InteractiveServer
+
+<h4>Contador</h4>
+
+<p>Contador atual : @contador</p>
+
+<button class="btn btn-primary" @onclick="IncrementarContador">Incrementar</button>
+<button class="btn btn-danger" @onclick="DecrementarContador">Decrementar</button>
+
+@code {
+    private int contador = 0;
+
+    private void IncrementarContador()
+    {
+        contador++;
+    }
+
+    private void DecrementarContador()
+    {
+        contador--;
+    }
+}
