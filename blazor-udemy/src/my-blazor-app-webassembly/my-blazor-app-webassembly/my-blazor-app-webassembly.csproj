@@ -11,6 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\my-blazor-app-webassembly.Client\my-blazor-app-webassembly.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.0.3" />
+    <PackageReference Include="MudBlazor" Version="8.12.0" />
   </ItemGroup>
 
 </Project>

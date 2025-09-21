@@ -1,4 +1,4 @@
-using my_blazor_app_webassembly.Client.Pages;
+using MudBlazor.Services;
 using my_blazor_app_webassembly.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,6 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveWebAssemblyComponents();
+
+builder.Services.AddMudServices();
 
 var app = builder.Build();
 
