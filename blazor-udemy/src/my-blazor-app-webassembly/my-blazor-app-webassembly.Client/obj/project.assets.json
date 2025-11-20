@@ -414,7 +414,7 @@
           }
         }
       },
-      "Microsoft.NET.ILLink.Tasks/9.0.3": {
+      "Microsoft.NET.ILLink.Tasks/9.0.8": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -841,7 +841,7 @@
           }
         }
       },
-      "Microsoft.NET.ILLink.Tasks/9.0.3": {
+      "Microsoft.NET.ILLink.Tasks/9.0.8": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -1474,10 +1474,10 @@
         "microsoft.jsinterop.webassembly.nuspec"
       ]
     },
-    "Microsoft.NET.ILLink.Tasks/9.0.3": {
-      "sha512": "1rqGTfubVg0qj2PsK6esyq3PIxtYJYrN3LsYUV9RrvH3anmt3fT3ozYdAZZH4U8JU/pt5pPIUk8NBSu26wtekA==",
+    "Microsoft.NET.ILLink.Tasks/9.0.8": {
+      "sha512": "rd1CbIsMtVPtZNTIVD6Xydue//klYOOQIDpRgu3BHtv17AlpRs74/6QFbcYgMm/jL+naVU2T3OFLxVSLV5lQLQ==",
       "type": "package",
-      "path": "microsoft.net.illink.tasks/9.0.3",
+      "path": "microsoft.net.illink.tasks/9.0.8",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -1491,7 +1491,7 @@
         "build/Microsoft.NET.ILLink.Analyzers.props",
         "build/Microsoft.NET.ILLink.Tasks.props",
         "build/Microsoft.NET.ILLink.targets",
-        "microsoft.net.illink.tasks.9.0.3.nupkg.sha512",
+        "microsoft.net.illink.tasks.9.0.8.nupkg.sha512",
         "microsoft.net.illink.tasks.nuspec",
         "tools/net472/ILLink.Tasks.dll",
         "tools/net472/ILLink.Tasks.dll.config",
@@ -1571,37 +1571,29 @@
   "projectFileDependencyGroups": {
     "net9.0": [
       "Microsoft.AspNetCore.Components.WebAssembly >= 9.0.3",
-      "Microsoft.NET.ILLink.Tasks >= 9.0.3",
+      "Microsoft.NET.ILLink.Tasks >= 9.0.8",
       "Microsoft.NET.Sdk.WebAssembly.Pack >= 9.0.8"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lfili\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/home/lfilipecosta3/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lfili\\source\\repos\\olevezinho\\learn-blazor\\blazor-udemy\\src\\my-blazor-app-webassembly\\my-blazor-app-webassembly.Client\\my-blazor-app-webassembly.Client.csproj",
+      "projectUniqueName": "/home/lfilipecosta3/src/personal-projects/learn-blazor/blazor-udemy/src/my-blazor-app-webassembly/my-blazor-app-webassembly.Client/my-blazor-app-webassembly.Client.csproj",
       "projectName": "my-blazor-app-webassembly.Client",
-      "projectPath": "C:\\Users\\lfili\\source\\repos\\olevezinho\\learn-blazor\\blazor-udemy\\src\\my-blazor-app-webassembly\\my-blazor-app-webassembly.Client\\my-blazor-app-webassembly.Client.csproj",
-      "packagesPath": "C:\\Users\\lfili\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lfili\\source\\repos\\olevezinho\\learn-blazor\\blazor-udemy\\src\\my-blazor-app-webassembly\\my-blazor-app-webassembly.Client\\obj\\",
+      "projectPath": "/home/lfilipecosta3/src/personal-projects/learn-blazor/blazor-udemy/src/my-blazor-app-webassembly/my-blazor-app-webassembly.Client/my-blazor-app-webassembly.Client.csproj",
+      "packagesPath": "/home/lfilipecosta3/.nuget/packages/",
+      "outputPath": "/home/lfilipecosta3/src/personal-projects/learn-blazor/blazor-udemy/src/my-blazor-app-webassembly/my-blazor-app-webassembly.Client/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\lfili\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/lfilipecosta3/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1620,7 +1612,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0": {
@@ -1633,7 +1625,7 @@
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[9.0.3, )",
+            "version": "[9.0.8, )",
             "autoReferenced": true
           },
           "Microsoft.NET.Sdk.WebAssembly.Pack": {
@@ -1656,7 +1648,7 @@
         "warn": true,
         "downloadDependencies": [
           {
-            "name": "Microsoft.NETCore.App.Ref",
+            "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
             "version": "[9.0.8, 9.0.8]"
           }
         ],
@@ -1665,7 +1657,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

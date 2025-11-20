@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorTarefas", "src\Blazor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorTarefas.Client", "src\BlazorTarefas\BlazorTarefas.Client\BlazorTarefas.Client.csproj", "{76D79231-5A49-468D-96CA-9C1BA2C34986}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorTarefas.Shared", "src\BlazorTarefas\BlazorTarefas.Shared\BlazorTarefas.Shared.csproj", "{B994CCE4-27D9-4402-9242-E7224717BE16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -163,6 +165,18 @@ Global
 		{76D79231-5A49-468D-96CA-9C1BA2C34986}.Release|x64.Build.0 = Release|Any CPU
 		{76D79231-5A49-468D-96CA-9C1BA2C34986}.Release|x86.ActiveCfg = Release|Any CPU
 		{76D79231-5A49-468D-96CA-9C1BA2C34986}.Release|x86.Build.0 = Release|Any CPU
+		{B994CCE4-27D9-4402-9242-E7224717BE16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B994CCE4-27D9-4402-9242-E7224717BE16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B994CCE4-27D9-4402-9242-E7224717BE16}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B994CCE4-27D9-4402-9242-E7224717BE16}.Debug|x64.Build.0 = Debug|Any CPU
+		{B994CCE4-27D9-4402-9242-E7224717BE16}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B994CCE4-27D9-4402-9242-E7224717BE16}.Debug|x86.Build.0 = Debug|Any CPU
+		{B994CCE4-27D9-4402-9242-E7224717BE16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B994CCE4-27D9-4402-9242-E7224717BE16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B994CCE4-27D9-4402-9242-E7224717BE16}.Release|x64.ActiveCfg = Release|Any CPU
+		{B994CCE4-27D9-4402-9242-E7224717BE16}.Release|x64.Build.0 = Release|Any CPU
+		{B994CCE4-27D9-4402-9242-E7224717BE16}.Release|x86.ActiveCfg = Release|Any CPU
+		{B994CCE4-27D9-4402-9242-E7224717BE16}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -181,5 +195,6 @@ Global
 		{C235EAF9-E2E8-05BF-1161-39018F353CB3} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{9A24F100-1BEF-4128-A54F-02E688F77C6C} = {C235EAF9-E2E8-05BF-1161-39018F353CB3}
 		{76D79231-5A49-468D-96CA-9C1BA2C34986} = {C235EAF9-E2E8-05BF-1161-39018F353CB3}
+		{B994CCE4-27D9-4402-9242-E7224717BE16} = {C235EAF9-E2E8-05BF-1161-39018F353CB3}
 	EndGlobalSection
 EndGlobal

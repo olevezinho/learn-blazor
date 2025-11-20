@@ -1107,40 +1107,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lfili\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/home/lfilipecosta3/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lfili\\source\\repos\\olevezinho\\learn-blazor\\blazor-udemy\\src\\my-blazor-app-auto\\my-blazor-app-auto\\my-blazor-app-auto.csproj",
+      "projectUniqueName": "/home/lfilipecosta3/src/personal-projects/learn-blazor/blazor-udemy/src/my-blazor-app-auto/my-blazor-app-auto/my-blazor-app-auto.csproj",
       "projectName": "my-blazor-app-auto",
-      "projectPath": "C:\\Users\\lfili\\source\\repos\\olevezinho\\learn-blazor\\blazor-udemy\\src\\my-blazor-app-auto\\my-blazor-app-auto\\my-blazor-app-auto.csproj",
-      "packagesPath": "C:\\Users\\lfili\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lfili\\source\\repos\\olevezinho\\learn-blazor\\blazor-udemy\\src\\my-blazor-app-auto\\my-blazor-app-auto\\obj\\",
+      "projectPath": "/home/lfilipecosta3/src/personal-projects/learn-blazor/blazor-udemy/src/my-blazor-app-auto/my-blazor-app-auto/my-blazor-app-auto.csproj",
+      "packagesPath": "/home/lfilipecosta3/.nuget/packages/",
+      "outputPath": "/home/lfilipecosta3/src/personal-projects/learn-blazor/blazor-udemy/src/my-blazor-app-auto/my-blazor-app-auto/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\lfili\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/lfilipecosta3/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\lfili\\source\\repos\\olevezinho\\learn-blazor\\blazor-udemy\\src\\my-blazor-app-auto\\my-blazor-app-auto.Client\\my-blazor-app-auto.Client.csproj": {
-              "projectPath": "C:\\Users\\lfili\\source\\repos\\olevezinho\\learn-blazor\\blazor-udemy\\src\\my-blazor-app-auto\\my-blazor-app-auto.Client\\my-blazor-app-auto.Client.csproj"
+            "/home/lfilipecosta3/src/personal-projects/learn-blazor/blazor-udemy/src/my-blazor-app-auto/my-blazor-app-auto.Client/my-blazor-app-auto.Client.csproj": {
+              "projectPath": "/home/lfilipecosta3/src/personal-projects/learn-blazor/blazor-udemy/src/my-blazor-app-auto/my-blazor-app-auto.Client/my-blazor-app-auto.Client.csproj"
             }
           }
         }
@@ -1155,7 +1147,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0": {
@@ -1185,7 +1177,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -9,4 +9,11 @@ The router is referencing the server and client assemblies for routing purposes.
         <RouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)" />
         <FocusOnNavigate RouteData="routeData" Selector="h1" />
     </Found>
+    <NotFound>
+        <LayoutView Layout="typeof(Layout.MainLayout)">
+            <h1 class="text-danger">Página não encontrada</h1>
+            <p> A URL não corresponde a uma rota válida!</p>
+            <p><a class="btn btn-primary" href="/">Voltar para a Home</a></p>
+        </LayoutView>
+    </NotFound>
 </Router>

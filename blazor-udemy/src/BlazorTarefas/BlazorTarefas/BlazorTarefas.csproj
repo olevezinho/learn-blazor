@@ -7,8 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BlazorTarefas.Client\BlazorTarefas.Client.csproj" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.0.3" />
+    <PackageReference Include="MudBlazor" Version="8.12.0" />
+    <ProjectReference Include="../BlazorTarefas.Shared/BlazorTarefas.Shared.csproj" />
+    <ProjectReference Include="../BlazorTarefas.Client/BlazorTarefas.Client.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.0.8" />
   </ItemGroup>
 
 </Project>
