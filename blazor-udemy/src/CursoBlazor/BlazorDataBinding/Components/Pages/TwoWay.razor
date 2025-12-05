@@ -1,0 +1,19 @@
+@page "/twoway"
+@rendermode InteractiveServer
+
+<h3>Exemplo Two-Way data binding</h3>
+
+<p><b>O nome será alterado quando o input perder o foco.</b></p>
+
+<input @bind="_nome"/>
+<p style="font-size: 40px;">Nome digitado: @_nome</p>
+
+@code 
+{
+    private string _nome = "Maria";
+
+    private void TrocarNome()
+    {
+        _nome = "João"; // Ao clicar o nome será alterado para João
+    }
+}

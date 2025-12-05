@@ -1,0 +1,62 @@
+@if (ListaDeTarefas is null)
+{
+    <Aviso>
+        <Conteudo1>
+            <MudProgressCircular Color="Color.Default" Indeterminate="true"/>
+        </Conteudo1>
+        <Conteudo2>
+            <span style="color: blue;">
+                <h3>A carregar Conteúdo ...</h3>
+            </span>
+        </Conteudo2>
+    </Aviso>
+}
+else if (!ListaDeTarefas.Any())
+{
+    <Aviso>
+        <Conteudo1>
+            <img src="images/doubt.jpg" width="250" height="250" alt="image-doubt"/>
+        </Conteudo1>
+        <Conteudo2>
+            <span style="color: blue;">
+                <h3>Ainda não adicionou tarefas ...</h3>
+            </span>
+        </Conteudo2>
+    </Aviso>
+}
+else
+{
+    <MudTable T="Tarefa" Items="@ListaDeTarefas"
+                         Dense="@dense"
+                         Hover="@hover"
+                         Bordered="@bordered"
+                         Striped="@striped"
+                         Breakpoint="Breakpoint.Sm"
+                         RowClass="cursor-pointer">
+        <HeaderContent>
+            <MudTh>Ação</MudTh>
+            <MudTh>Data</MudTh>
+            <MudTh>Descrição</MudTh>
+            <MudTh>Concluída</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <TarefaIndividual TarefaItem="@context" OnRemoverTarefa="HandleRemoveTarefa"></TarefaIndividual>
+        </RowTemplate>
+    </MudTable>
+}
+
+@code {
+    [Parameter, EditorRequired] 
+    public List<Tarefa> ListaDeTarefas { get; set; } = [];
+    
+    [Parameter]
+    public EventCallback<Guid> OnRemoverTarefa { get; set; }
+    
+    private bool dense = false;
+    private bool hover = true;
+    private bool striped = false;
+    private bool bordered = true;
+
+    private async Task HandleRemoveTarefa(Guid contextId) => 
+        await OnRemoverTarefa.InvokeAsync(contextId);
+}

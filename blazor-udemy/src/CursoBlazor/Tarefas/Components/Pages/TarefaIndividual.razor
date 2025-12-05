@@ -1,0 +1,19 @@
+<MudButton OnClick="@(() => RemoveTarefa(TarefaItem.Id))">
+    <MudIcon Icon="@Icons.Material.Filled.Delete"
+             Size="Size.Small"
+             Color="Color.Warning"/>
+</MudButton>
+<MudTd DataLabel="Data">@TarefaItem.DataCriacao</MudTd>
+<MudTd DataLabel="Descrição">@TarefaItem.Descricao</MudTd>
+<MudCheckBox @bind-Value="@TarefaItem.Concluida" Disabled="false"></MudCheckBox>
+
+@code {
+    [Parameter, EditorRequired] 
+    public Tarefa TarefaItem { get; set; } = null!;
+    
+    [Parameter]
+    public EventCallback<Guid> OnRemoverTarefa { get; set; }
+
+    private async Task RemoveTarefa(Guid contextId) => 
+        await OnRemoverTarefa.InvokeAsync(contextId);
+}

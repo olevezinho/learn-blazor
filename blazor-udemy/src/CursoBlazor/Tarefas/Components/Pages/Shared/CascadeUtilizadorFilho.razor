@@ -1,0 +1,15 @@
+@using static CascadeUtilizadorPai
+
+@if(UtilizadorAtual is { Autenticado: true })
+{
+    <p>Bem vindo, <strong>@UtilizadorAtual.Nome</strong></p>
+}
+else
+{
+    <p>Utilizador não autenticado.</p>
+}
+
+@code {
+    [CascadingParameter] 
+    private Utilizador? UtilizadorAtual { get; set; }
+}

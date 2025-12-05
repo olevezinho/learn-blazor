@@ -1,0 +1,26 @@
+[
+  {
+    "id": "b1fb4413-06f1-4f66-8204-17972b91f985",
+    "descricao": "Fazer o Curso de Blazor.",
+    "concluida": true,
+    "datacriacao": "2025-08-11"
+  },
+  {
+    "id": "8ac17062-43f9-42cb-8345-eb3e6efc7782",
+    "descricao": "Fazer o curso de GraphQL.",
+    "concluida": false,
+    "datacriacao": "2025-09-11"
+  },
+  {
+    "id": "49753323-1e22-4926-84c3-f2ea9bf1c5e7",
+    "descricao": "Ler o livro de Blazor",
+    "concluida": false,
+    "datacriacao": "2025-10-11"
+  },
+  {
+    "id": "63bcea7a-f782-4d97-83e8-1b9a224d1300",
+    "descricao": "Ler o livro de ASP.NET Core Cybersecurity.",
+    "concluida": false,
+    "datacriacao": "2025-11-11"
+  }
+]

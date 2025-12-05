@@ -1,0 +1,57 @@
+@page "/cronometro"
+@* @rendermode InteractiveServer *@
+@* Desativar a prerenderização *@
+@rendermode @(new InteractiveServerRenderMode(prerender: false))
+@implements IDisposable
+
+<PageTitle>Cronómetro</PageTitle>
+
+<h1>Cronómetro simples</h1>
+
+<h3 style="font-size: 50px;">@tempoDecorrido segundos</h3>
+
+<button class="btn btn-danger" @onclick="PararCronometro" disabled="@cronometroParado">Parar cronómetro</button>
+
+@code {
+
+    private int tempoDecorrido = 0;
+    private Timer? meuTimer;
+    private bool cronometroParado = false;
+
+    protected override void OnInitialized()
+    {
+        // dispara a cada segundo
+        meuTimer = new Timer(Contar, null, 1000, 1000);
+    }
+    
+    private void Contar(object? state)
+    {
+        // ignora se já foi parado
+        if(cronometroParado)
+            return;
+        
+        tempoDecorrido++;
+
+        // informa ao Blazor que o estado do componente mudou
+        InvokeAsync(StateHasChanged);
+    }
+    
+    private void PararCronometro()
+    {
+        cronometroParado = true;
+        
+        // desliga de vez o timer
+        meuTimer?.Change(Timeout.Infinite, Timeout.Infinite);
+        meuTimer?.Dispose();
+        meuTimer = null;
+        Console.WriteLine("Cronómetro parado e recursos libertados.");
+    }
+
+    public void Dispose()
+    {
+        // TODO release managed resources here
+        meuTimer?.Dispose();
+        Console.WriteLine("Dispose chamado pelo Blazor (componente destruído)");
+    }
+
+}

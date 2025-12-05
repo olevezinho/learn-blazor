@@ -1,0 +1,15 @@
+@page "/aula-cascade-utilizador-pai"
+@rendermode InteractiveServer
+
+<h3>Cascade Utilizador Pai</h3>
+
+<CascadingValue Value="@_utilizador" TValue="Utilizador">
+    <CascadeUtilizadorFilho />
+</CascadingValue>
+
+@code {
+    
+    private readonly Utilizador _utilizador = new("Filipe", true);
+
+    protected internal record Utilizador(string Nome, bool Autenticado);
+}

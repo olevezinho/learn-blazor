@@ -1,0 +1,51 @@
+@page "/contador-inteligente"
+@rendermode InteractiveServer
+
+<PageTitle>Contador Inteligente</PageTitle>
+
+<h1>Contador inteligente com <code>ShouldRender</code></h1>
+
+<div class="alert alert-warning" style="font-size: 20px;">
+    <p>O valor no ecrã só será atualizado quando o contador for <strong>par</strong></p>
+    <p>
+        Abra o <strong>Console Output</strong> do editor para 
+        var o valor real do contador a cada clique no botão.
+    </p>
+</div>
+
+<h2>Valor na Tela: @valorNoEcra</h2>
+
+<button class="btn btn-primary" @onclick="IncrementarContador">
+    Incrementar Contador
+</button>
+
+@code {
+    private int contador = 0;
+    private int valorNoEcra = 0;
+    
+    //1. O metodo chamdo pelo botão
+    public void IncrementarContador()
+    {
+        contador++;
+        Console.WriteLine($"Contador incrementado. Valor real incrementado para: {contador}");
+    }
+    
+    //2. O método em análise: ShouldRender
+    protected override bool ShouldRender()
+    {
+        // Logica de decisão
+        // Verificamos se o contador é par.
+        // O operador '%' retorna o resto da divisão.
+        // se o resto da divisão por 2 for 0, o número é par.
+        if (contador % 2 == 0)
+        {
+            // Atualiza o valor exibido no ecrã
+            valorNoEcra = contador;
+            // Devovlendo 'true', permite que o Blazor faça a renderização
+            return true;
+        }
+        
+        // Devovlendo 'false', impede que o Blazor faça a renderização
+        return false;
+    }
+}

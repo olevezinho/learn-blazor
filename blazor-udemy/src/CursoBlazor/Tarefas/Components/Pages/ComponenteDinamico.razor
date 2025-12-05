@@ -1,0 +1,62 @@
+@page "/aula-cascading-dinamico"
+@rendermode InteractiveServer
+
+<h3>Exemplo de cascata dinâmica</h3>
+
+@* <CascadingValue Value="@_informacoesTema"> *@
+
+@* Utilizando o IsFixed = true, a informação apresentada muda, 
+mas o tema permancece o mesmo e o componente filho não é alterado 
+até que o objeto seja alterado. *@
+<CascadingValue Value="@_informacoesTema" IsFixed="true">
+    <div style="border: 2px solid black; padding: 15px;">
+        <h2>Eu sou o componente pai</h2>
+        <br/>
+        <MudButton Variant="Variant.Filled" OnClick="TrocarTema" StartIcon="@Icons.Material.Filled.CompareArrows">Trocar tema</MudButton>
+        <hr/>
+        <p>Tema atual no Pai: <strong>@_informacoesTema.Nome</strong></p>
+        <br/>
+        <PainelDeControlo/>
+    </div>
+</CascadingValue>
+
+@code {
+
+    private TemaInfo _informacoesTema = new TemaInfo
+    {
+        Nome = "dark",
+        CorFundo = "#333333",
+        CorTexto = "#FFFFFF"
+    };
+
+    private void TrocarTema()
+    {
+        if (_informacoesTema.Nome is "dark")
+        {
+            _informacoesTema = new TemaInfo()
+            {
+                Nome = "light",
+                CorFundo = "#EEEEEE",
+                CorTexto = "#000000"
+            };
+        }
+        else
+        {
+            _informacoesTema = new TemaInfo()
+            {
+                Nome = "dark",
+                CorFundo = "#333333",
+                CorTexto = "#FFFFFF"
+            };
+        }
+        // A mudança do objeto força a atualização dos componentes filhos
+    }
+    
+    protected internal class TemaInfo
+    {
+        public string Nome { get; set; } = "light";
+        public string CorFundo { get; set; } = "#EEEEEE";
+        public string CorTexto { get; set; } = "#000000";
+    }
+
+}
