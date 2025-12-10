@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3h4NWPLgo1g=",
+  "dgSpecHash": "4m+XH2qy/Ko=",
   "success": true,
   "projectFilePath": "/home/lfilipecosta3/src/personal-projects/learn-blazor/blazor-udemy/src/my-blazor-app-webassembly/my-blazor-app-webassembly.Client/my-blazor-app-webassembly.Client.csproj",
   "expectedPackageFiles": [
@@ -27,9 +27,9 @@
     "/home/lfilipecosta3/.nuget/packages/microsoft.extensions.primitives/9.0.3/microsoft.extensions.primitives.9.0.3.nupkg.sha512",
     "/home/lfilipecosta3/.nuget/packages/microsoft.jsinterop/9.0.3/microsoft.jsinterop.9.0.3.nupkg.sha512",
     "/home/lfilipecosta3/.nuget/packages/microsoft.jsinterop.webassembly/9.0.3/microsoft.jsinterop.webassembly.9.0.3.nupkg.sha512",
-    "/home/lfilipecosta3/.nuget/packages/microsoft.net.illink.tasks/9.0.8/microsoft.net.illink.tasks.9.0.8.nupkg.sha512",
-    "/home/lfilipecosta3/.nuget/packages/microsoft.net.sdk.webassembly.pack/9.0.8/microsoft.net.sdk.webassembly.pack.9.0.8.nupkg.sha512",
-    "/home/lfilipecosta3/.nuget/packages/microsoft.netcore.app.runtime.mono.browser-wasm/9.0.8/microsoft.netcore.app.runtime.mono.browser-wasm.9.0.8.nupkg.sha512"
+    "/home/lfilipecosta3/.nuget/packages/microsoft.net.illink.tasks/9.0.11/microsoft.net.illink.tasks.9.0.11.nupkg.sha512",
+    "/home/lfilipecosta3/.nuget/packages/microsoft.net.sdk.webassembly.pack/10.0.0/microsoft.net.sdk.webassembly.pack.10.0.0.nupkg.sha512",
+    "/home/lfilipecosta3/.nuget/packages/microsoft.netcore.app.runtime.mono.browser-wasm/9.0.11/microsoft.netcore.app.runtime.mono.browser-wasm.9.0.11.nupkg.sha512"
   ],
   "logs": []
 }
