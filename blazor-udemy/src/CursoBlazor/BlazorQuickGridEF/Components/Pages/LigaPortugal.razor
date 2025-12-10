@@ -1,0 +1,113 @@
+@page "/liga-portugal"
+@rendermode InteractiveServer
+@inject AppDbContext Context
+
+<PageTitle>Liga Portugal</PageTitle>
+<h1>Liga Portuguesa de Futebol 2025</h1>
+
+@if (_equipasQueryable is null)
+{
+    <p><em>A Carregar dados ...</em></p>
+}
+else
+{
+    <div class="d-grid">
+    @* <QuickGrid Items="@_equipasQueryable" Pagination="@pagination"> *@
+        <QuickGrid Items="@_equipasFiltroQueryable" @ref="refgrid" Pagination="@pagination">
+            <PropertyColumn Property="@(p => p.Nome)" Title="Equipa" />
+            <PropertyColumn Property="@(p => p.Pontos)" Title="Pontos" Sortable="true"/>
+            <PropertyColumn Property="@(p => p.Jogos)" Title="J" />
+            <PropertyColumn Property="@(p => p.Vitorias)" Title="V" Sortable="true"/>
+            <PropertyColumn Property="@(p => p.Empates)" Title="E" />
+            <PropertyColumn Property="@(p => p.Derrotas)" Title="D" />
+            <PropertyColumn Property="@(p => p.GolosPro)" Title="GM" />
+            <PropertyColumn Title="GS" Property="@(p => Calcular(p.GolosPro, p.SaldoGolos))"/>
+            <PropertyColumn Property="@(p => p.SaldoGolos)" Title="SG" Sortable="true"/>
+            <PropertyColumn Property="@(p => p.TemChampions)" Title="Champions">
+                <ColumnOptions>
+                    <input type="checkbox" @bind="temchampions" @bind:after="AplicaFiltroChampions" /> Aplica Filtro Champions
+                </ColumnOptions>
+            </PropertyColumn>
+            <PropertyColumn Property="@(p => p.Status)" Title="Zona de Provas Europeias" />
+            <TemplateColumn Title="Ação">
+                <button class="btn btn-primary" @onclick="@(() => ExibeEstado(context))">Status</button>
+            </TemplateColumn>
+        </QuickGrid>
+    </div>
+    <div class="page-size-chooser">
+        <label>Linhas por página:
+            <select @bind="@pagination.ItemsPerPage">
+                <option value="5">5</option>
+                <option value="10">10</option>
+            </select>
+        </label>
+    </div>
+    <Paginator State="@pagination" />
+}
+
+<p>
+    <h3><b>@Mensagem</b></h3>
+</p>
+
+@code 
+{
+    IQueryable<Equipa>? _equipasQueryable;
+    PaginationState pagination = new () { ItemsPerPage = 5 };
+    IQueryable<Equipa>? _equipasFiltroQueryable;
+    public string? Mensagem { get; set; } = string.Empty;
+    private bool temchampions = false;
+    private QuickGrid<Equipa>? refgrid;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Delay(300); // Simulate async data loading
+        CarregaEquipas();
+    }
+
+    private IQueryable<Equipa> CarregaEquipas()
+    {
+        // _equipasQueryable = Context
+        //     .Equipas
+        //     .OrderByDescending(e => e.Pontos)
+        //     .ThenByDescending(e => e.Vitorias)
+        //     .ThenByDescending(e => e.SaldoGolos)
+        //     .AsQueryable();
+        //
+        // return _equipasQueryable;
+        
+        _equipasQueryable = Context
+            .Equipas
+            .OrderByDescending(e => e.Pontos)
+                .ThenByDescending(e => e.Vitorias)
+                    .ThenByDescending(e => e.SaldoGolos)
+            .AsQueryable();
+        
+        _equipasFiltroQueryable = _equipasQueryable;
+
+        return _equipasQueryable;
+    }
+
+    private int Calcular(int golosMarcados, int saldoGolos)
+        => golosMarcados - saldoGolos;
+
+    private void ExibeEstado(Equipa context)
+    {
+        Mensagem = $"{context.Nome} - {context.Status}";
+    }
+
+    private async Task AplicaFiltroChampions()
+    {
+        if (temchampions)
+        {
+            _equipasFiltroQueryable = _equipasQueryable
+                .Where(e => e.TemChampions)
+                .AsQueryable();
+        }
+        else
+        {
+            _equipasFiltroQueryable = _equipasQueryable;
+        }
+
+        await refgrid!.RefreshDataAsync();
+    }
+}

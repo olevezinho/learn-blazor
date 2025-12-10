@@ -1,0 +1,55 @@
+@page "/formulario-com-validacao"
+@rendermode InteractiveServer
+
+<h3>Registo de alunos com validação</h3>
+
+<EditForm Model="@aluno"
+          OnValidSubmit="EnviarFormularioValido">
+          @* OnInvalidSubmit apenas para demonstração *@
+          @* OnInvalidSubmit="TratarFormularioInvalido"> *@
+
+    @* Componente de validação de dados: *@
+    <DataAnnotationsValidator/>
+    @* Componente que exibe todos os erros de validação: *@
+    <ValidationSummary/>
+
+    <div class="form-group">
+        <label for="nome">Nome:</label>
+        <InputText id="nome" @bind-Value="aluno.Nome" class="form-control"></InputText>
+        @* Componente que exibe apenas o erro de validação deste campo: *@
+        <ValidationMessage For="@(() => aluno.Nome)"/>
+    </div>
+
+    <div class="form-group">
+        <label for="email">E-mail:</label>
+        <InputText id="email" @bind-Value="aluno.Email" class="form-control"></InputText>
+        @* Componente que exibe apenas o erro de validação deste campo: *@
+        <ValidationMessage For="@(() => aluno.Email)"/>
+    </div>
+
+    <div class="form-group">
+        <label for="idade">Idade:</label>
+        <InputNumber id="idade" @bind-Value="aluno.Idade" class="form-control"></InputNumber>
+        @* Componente que exibe apenas o erro de validação deste campo: *@
+        <ValidationMessage For="@(() => aluno.Idade)"/>
+    </div>
+
+    <div class="mt-2">
+        <input type="submit" value="Enviar" class="btn btn-primary"/>
+    </div>
+</EditForm>
+
+@code { 
+    private Aluno aluno = new();
+
+    private void EnviarFormularioValido(EditContext context)
+    {
+        Console.WriteLine($"Formulário válido! {aluno.Nome}, {aluno.Email}, {aluno.Idade} anos");
+    }
+    
+    // Não é obrigatório implementar este método, apenas para demonstração
+    // private void TratarFormularioInvalido(EditContext context)
+    // {
+    //     Console.WriteLine("Formulário contém erros de validação.");
+    // }
+}
