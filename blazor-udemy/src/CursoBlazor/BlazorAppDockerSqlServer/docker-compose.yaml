@@ -1,0 +1,24 @@
+﻿networks:
+  mynetwork:
+
+services:
+  sqlserverdb:
+    container_name: sqlservercontainer
+    image: mcr.microsoft.com/mssql/server:2025-latest
+    ports:
+      - 8008:1433
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=DockerSql2025!
+      - MSSQL_PID=Evaluation
+  
+  blaqzorsqlserver:
+    image: blaqzorsqlserverapp
+    ports:
+      - 8088:8080
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - sqlserverdb
+

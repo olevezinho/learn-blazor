@@ -1,0 +1,18 @@
+@page "/novolivro"
+
+<PageTitle>Novo Livro</PageTitle>
+
+<div class="row justify-content-center">
+    <div class="col-6">
+        <LivroForm ModoEdicao="false" OnValidaLivroSubmit="AdicionarLivro" />
+    </div>
+</div>
+
+@code 
+{
+    private async Task AdicionarLivro(Livro livro)
+    {
+        await LivroRepository.AdicionarLivroAsync(livro);
+        Navigation.NavigateTo("/livros");
+    }
+}

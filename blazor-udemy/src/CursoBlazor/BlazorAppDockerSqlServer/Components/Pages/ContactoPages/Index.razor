@@ -1,0 +1,36 @@
+@page "/contactos"
+@using Microsoft.EntityFrameworkCore
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using BlazorAppDockerSqlServer.Data
+@implements IAsyncDisposable
+@inject IDbContextFactory<BlazorAppDockerSqlServer.Data.ApplicationDbContext> DbFactory
+
+<PageTitle>Index</PageTitle>
+
+<h1>Index</h1>
+
+<p>
+    <a href="contactos/create">Create New</a>
+</p>
+
+<QuickGrid Class="table" Items="context.Contactos">
+    <PropertyColumn Property="contacto => contacto.Nome" />
+    <PropertyColumn Property="contacto => contacto.Email" />
+
+    <TemplateColumn Context="contacto">
+        <a href="@($"contactos/edit?id={contacto.Id}")">Edit</a> |
+        <a href="@($"contactos/details?id={contacto.Id}")">Details</a> |
+        <a href="@($"contactos/delete?id={contacto.Id}")">Delete</a>
+    </TemplateColumn>
+</QuickGrid>
+
+@code {
+    private ApplicationDbContext context = default!;
+
+    protected override void OnInitialized()
+    {
+        context = DbFactory.CreateDbContext();
+    }
+
+    public async ValueTask DisposeAsync() => await context.DisposeAsync();
+}
