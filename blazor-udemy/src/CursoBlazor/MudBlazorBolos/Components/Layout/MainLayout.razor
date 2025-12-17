@@ -1,0 +1,16 @@
+﻿@inherits LayoutComponentBase
+
+<PageTitle>Bolos</PageTitle>
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudAppBar Color="Color.Primary">
+        <MudIcon Icon="@Icons.Material.Rounded.Cake" Color="Color.Inherit" />
+        <MudText Typo="Typo.h4">Bolos tradicionais</MudText>
+    </MudAppBar>
+    <MudMainContent Class="mt-4">
+        @Body
+    </MudMainContent>
+</MudLayout>

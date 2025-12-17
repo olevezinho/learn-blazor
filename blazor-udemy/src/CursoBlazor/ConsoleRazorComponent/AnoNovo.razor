@@ -1,0 +1,31 @@
+﻿<h3>AnoNovo</h3>
+
+<p>Hoje é: @DateTime.Now.ToLongDateString()</p>
+
+<br />
+
+@if(tempoRestante.TotalSeconds > 0)
+{
+    <p>Faltam @tempoRestante.Days dias, @tempoRestante.Hours horas, @tempoRestante.Minutes minutos e @tempoRestante.Seconds segundos para o final do ano.</p>
+}
+else
+{
+    <p>Bem vindo a @DateTime.Now.Year!</p>
+}
+
+
+@code {
+    private DateTime finalDoAno = new DateTime(DateTime.Now.Year, 12, 31);
+    private TimeSpan tempoRestante;
+
+    protected override void OnInitialized()
+    {
+        CalcularTempoRestante();
+    }
+
+    private void CalcularTempoRestante()
+    {
+        DateTime agora = DateTime.Now;
+        tempoRestante = finalDoAno - agora;
+    }
+}

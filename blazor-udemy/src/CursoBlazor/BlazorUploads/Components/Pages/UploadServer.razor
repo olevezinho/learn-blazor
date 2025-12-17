@@ -1,0 +1,87 @@
+@page "/uploadserver"
+@rendermode InteractiveServer
+
+<h3>Upload de arquivos (InteractiveServer)</h3>
+
+<EditForm Model="@ficheiroUpload" OnValidSubmit="@HandleFormSubmit" enctype="multipart/form-data">
+    Selecione até 5 arquivo(s): <InputFile OnChange="@SelectFiles" multiple />
+    <br />
+    <button type="submit">Enviar</button>
+</EditForm>
+
+@if (ficheiros.Count > 0)
+{
+    <li>Arquivos selecionados </li>
+    <ul>
+        @foreach (var arq in ficheiros)
+        {
+            <li>@arq.Name @arq.Size bytes</li>
+        }
+    </ul>
+}
+
+<br />
+
+<ul>
+    @foreach (var mensagem in mensagens)
+    {
+        <li>
+            @mensagem
+        </li>
+    }
+</ul>
+
+@code {
+    List<string> mensagens = new();
+    List<IBrowserFile> ficheiros = new();
+    int tamanhoMaximoFicheiro = 1 * 1024 * 1024; //1 MB
+    FicheiroUpload ficheiroUpload = new();
+    List<FicheiroUpload> uploads = new();
+
+    private void SelectFiles(InputFileChangeEventArgs e)
+    {
+        ficheiros = e.GetMultipleFiles(tamanhoMaximoFicheiro).ToList();
+    }
+
+    private async Task HandleFormSubmit()
+    {
+        mensagens.Clear();
+        var extensoesPermitidas = new string[] { ".png", ".jpg", ".jpeg", ".gif" };
+        int contador = 0;
+
+        mensagens.Add("Arquivo(s) enviado(s)  ");
+        foreach (var ficheiro in ficheiros)
+        {
+            try
+            {
+                (int statusCode, string statusMessage) =
+                    await UploadService.FicheiroUploadAsync(ficheiro,
+                                                            tamanhoMaximoFicheiro,
+                                                            extensoesPermitidas);
+
+                if (statusCode == 1)
+                {
+                    mensagens.Add($" {ficheiro.Name} ");
+                    var arquivoDados = new FicheiroUpload
+                    {
+                            NomeFicheiroUpload = statusMessage
+                    };
+                    // salva imagem no banco de dados
+                    await UploadRepository.UploadFicheiroDbAsync(arquivoDados);
+                    uploads.Add(arquivoDados);
+                    contador++;
+                }
+                else
+                {
+                    mensagens.Add(statusMessage);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                mensagens.Add($"Arquivo : {ficheiro.Name} Erro : {ex.Message}");
+            }
+        }
+        mensagens.Add($" {contador}/{ficheiros.Count} enviado(s)");
+    }
+}

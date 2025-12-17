@@ -1,0 +1,97 @@
+@page "/produtodetalhes/{Id:int}"
+
+@if (Produto is null && MensagemErro is null)
+{
+    <ExibirSpinner />
+}
+else if (MensagemErro is not null)
+{
+    <ExibirErro MensagemErro="@MensagemErro"></ExibirErro> 
+}
+else
+{
+    <h3 class="mb-5">Detalhes do Produto</h3>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <img class="img-fluid" src="@Produto!.ImagemUrl" alt="produtoImage"/>
+        </div>
+        <div class="col-md-6">
+            <h3>@Produto.Nome</h3>
+            <p class="mb-4">@Produto.Descricao</p>
+            <p class="mb-4">
+                <b>
+                    @Produto.Preco.ToString("C")&nbsp;(@Produto.Quantidade items)
+                </b>
+            </p>
+            <div>
+                <button class="btn btn-success"
+                        @onclick="() => AdicionarAoCarrinho_ClickAsync(new CarrinhoItemAdicionaDto 
+                        {
+                            CarrinhoId = UtilizadorLogado.CarrinhoId,
+                            ProdutoId = Produto.Id,
+                            Quantidade = 1  
+                        })">
+                    Adicionar ao Carrinho
+                </button>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter] 
+    public int Id { get; set; }
+    
+    public ProdutoDto? Produto { get; set; }
+    
+    public string? MensagemErro { get; set; }
+    
+    private List<CarrinhoItemDto> CarrinhoCompraItens { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            CarrinhoCompraItens = await CarrinhoItensLocalStorageService.GetCarrinhoItemsLocalStorageAsync();
+            Produto = await GetProdutoPorIdAsync(Id);
+        }
+        catch (Exception e)
+        {
+            MensagemErro = e.Message;
+        }
+    }
+
+    protected async Task AdicionarAoCarrinho_ClickAsync(CarrinhoItemAdicionaDto carrinhoItemAdicionaDto)
+    {
+        try
+        {
+            var carrinhoItemDto = await CarrinhoCompraService.AdicionaItemAsync(carrinhoItemAdicionaDto);
+
+            if (carrinhoItemDto is not null)
+            {
+                CarrinhoCompraItens.Add(carrinhoItemDto);
+                await CarrinhoItensLocalStorageService.GuardaCarrinhoItensLocalStorageAsync(CarrinhoCompraItens);
+            }
+            
+            NavigationManager.NavigateTo("/carrinho");
+        }
+        catch (Exception e)
+        {
+            MensagemErro = e.Message;
+            throw;
+        }
+    }
+
+    private async Task<ProdutoDto> GetProdutoPorIdAsync(int id)
+    {
+        var produtosDto = await ProdutosLocalStorageService.GetProdutosLocalStorageAsync();
+
+        if (produtosDto is not null)
+        {
+            return produtosDto.SingleOrDefault(p => p.Id == id);
+        }
+        
+        return null;
+    }
+
+}

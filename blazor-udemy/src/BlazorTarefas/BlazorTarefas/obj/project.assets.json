@@ -1248,37 +1248,35 @@
     ]
   },
   "packageFolders": {
-    "/home/luis_filipe/.nuget/packages/": {}
+    "/home/lfilipecosta3/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/luis_filipe/src/learn-blazor/blazor-udemy/src/BlazorTarefas/BlazorTarefas/BlazorTarefas.csproj",
+      "projectUniqueName": "/home/lfilipecosta3/src/personal-projects/learn-blazor/blazor-udemy/src/BlazorTarefas/BlazorTarefas/BlazorTarefas.csproj",
       "projectName": "BlazorTarefas",
-      "projectPath": "/home/luis_filipe/src/learn-blazor/blazor-udemy/src/BlazorTarefas/BlazorTarefas/BlazorTarefas.csproj",
-      "packagesPath": "/home/luis_filipe/.nuget/packages/",
-      "outputPath": "/home/luis_filipe/src/learn-blazor/blazor-udemy/src/BlazorTarefas/BlazorTarefas/obj/",
+      "projectPath": "/home/lfilipecosta3/src/personal-projects/learn-blazor/blazor-udemy/src/BlazorTarefas/BlazorTarefas/BlazorTarefas.csproj",
+      "packagesPath": "/home/lfilipecosta3/.nuget/packages/",
+      "outputPath": "/home/lfilipecosta3/src/personal-projects/learn-blazor/blazor-udemy/src/BlazorTarefas/BlazorTarefas/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/luis_filipe/.nuget/NuGet/NuGet.Config"
+        "/home/lfilipecosta3/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "/usr/share/dotnet/library-packs": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.pkg.github.com/olevezinho/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/home/luis_filipe/src/learn-blazor/blazor-udemy/src/BlazorTarefas/BlazorTarefas.Client/BlazorTarefas.Client.csproj": {
-              "projectPath": "/home/luis_filipe/src/learn-blazor/blazor-udemy/src/BlazorTarefas/BlazorTarefas.Client/BlazorTarefas.Client.csproj"
+            "/home/lfilipecosta3/src/personal-projects/learn-blazor/blazor-udemy/src/BlazorTarefas/BlazorTarefas.Client/BlazorTarefas.Client.csproj": {
+              "projectPath": "/home/lfilipecosta3/src/personal-projects/learn-blazor/blazor-udemy/src/BlazorTarefas/BlazorTarefas.Client/BlazorTarefas.Client.csproj"
             },
-            "/home/luis_filipe/src/learn-blazor/blazor-udemy/src/BlazorTarefas/BlazorTarefas.Shared/BlazorTarefas.Shared.csproj": {
-              "projectPath": "/home/luis_filipe/src/learn-blazor/blazor-udemy/src/BlazorTarefas/BlazorTarefas.Shared/BlazorTarefas.Shared.csproj"
+            "/home/lfilipecosta3/src/personal-projects/learn-blazor/blazor-udemy/src/BlazorTarefas/BlazorTarefas.Shared/BlazorTarefas.Shared.csproj": {
+              "projectPath": "/home/lfilipecosta3/src/personal-projects/learn-blazor/blazor-udemy/src/BlazorTarefas/BlazorTarefas.Shared/BlazorTarefas.Shared.csproj"
             }
           }
         }

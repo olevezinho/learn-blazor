@@ -1,0 +1,36 @@
+<h4>Filho com 2 parâmetros</h4>
+
+@if (ItemId <= 0 || string.IsNullOrEmpty(Nome))
+    // Esta parte só renderiza depois do SetParametersAsync()
+    // A sobrescrita de SetParametersAsync é usada para:
+    // - validar parâmetros antes do processamento
+    // - executar lógica personalizada quando os parametros mudam
+    // - controlar o fluxo de renderização
+{
+    <p style="color: red; font-size: 30px;">✘ Dados Inválidos!</p> 
+    <p style="font-size: 30px;">Id: @ItemId, Nome: '@Nome'</p>
+}
+else
+{
+    <p style="color: green; font-size: 30px;">✔ Dados Válidos!</p>
+    <p style="font-size: 30px;">Id: @ItemId, Nome: '@Nome'</p>
+}
+
+@code {
+
+    [Parameter]
+    public int? ItemId { get; set; }
+    
+    [Parameter]
+    public string? Nome { get; set; }
+
+    public override async Task SetParametersAsync(ParameterView parameters) // Esta é a assinatura que o Blazor espera
+    {
+        Console.WriteLine("SetParametersAsync chamado!");
+        parameters.SetParameterProperties(this); // Pega nos valores do ParameterView e atribui às propriedades marcadas com [Parameter] do seu componente
+        Console.WriteLine($"ItemId: {ItemId}, Nome: {Nome}");
+        await base.SetParametersAsync(ParameterView.Empty); // Chama a implementação base para que o Blazor continue seu ciclo de vida normalmente
+        Console.WriteLine("Processamento completo!"); // Só agora os parâmetros foram atribuídos e o componente pode ser renderizado
+    }
+
+}

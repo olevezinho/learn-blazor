@@ -1,0 +1,19 @@
+﻿@using System.Net.Http
+@using System.Net.Http.Json
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.Components.Web.Virtualization
+@using Microsoft.AspNetCore.Components.WebAssembly.Http
+@using Microsoft.JSInterop
+@using BlazorShop.Web
+@using BlazorShop.Web.Layout
+
+@using BlazorShop.Web.Services
+@inject IProdutoService ProdutoService
+@inject ICarrinhoCompraService CarrinhoCompraService
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JsRuntime
+@inject IGereCarrinhoItensLocalStorageService CarrinhoItensLocalStorageService
+@inject IGereProdutosLocalStorageService ProdutosLocalStorageService
+@using BlazorShop.Models.DTOs

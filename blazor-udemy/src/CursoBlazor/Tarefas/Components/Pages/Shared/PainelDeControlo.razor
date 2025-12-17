@@ -1,0 +1,13 @@
+@* Importa a classe TemaInfo contida no componente *@
+@using static ComponenteDinamico 
+
+<div style="background-color: @Tema.CorFundo; color: @Tema.CorTexto; padding: 15px; margin-top: 10px; border: 1px solid gray;">
+    <h3>Painel de Controlo - Componente filho</h3>
+    <p>Este painel adapta-se ao tema atual definido no componente pai. O tema recebido é <strong>@Tema.Nome</strong></p>
+    
+</div>
+
+@code {
+    [CascadingParameter] 
+    private TemaInfo Tema { get; set; } = new TemaInfo();
+}

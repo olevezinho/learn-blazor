@@ -1,0 +1,48 @@
+@page "/contactos/details"
+@using Microsoft.EntityFrameworkCore
+@using BlazorAppDockerSqlServer.Data
+@inject IDbContextFactory<BlazorAppDockerSqlServer.Data.ApplicationDbContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Details</PageTitle>
+
+<h1>Details</h1>
+
+<div>
+    <h2>Contacto</h2>
+    <hr />
+    @if (contacto is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else {
+        <dl class="row">
+            <dt class="col-sm-2">Nome</dt>
+            <dd class="col-sm-10">@contacto.Nome</dd>
+            <dt class="col-sm-2">Email</dt>
+            <dd class="col-sm-10">@contacto.Email</dd>
+        </dl>
+        <div>
+            <a href="@($"/contactos/edit?id={contacto.Id}")">Edit</a> |
+            <a href="@($"/contactos")">Back to List</a>
+        </div>
+    }
+</div>
+
+@code {
+    private Contacto? contacto;
+
+    [SupplyParameterFromQuery]
+    private int Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        contacto = await context.Contactos.FirstOrDefaultAsync(m => m.Id == Id);
+
+        if (contacto is null)
+        {
+            NavigationManager.NotFound();
+        }
+    }
+}

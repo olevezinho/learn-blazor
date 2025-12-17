@@ -1,0 +1,34 @@
+@typeparam TItem
+
+@if (Itens is null || !Itens.Any())
+{
+    <Aviso>
+        <Conteudo1>
+            <img src="images/doubt.jpg" width="250" height="250" alt="image-doubt"/>
+        </Conteudo1>
+        <Conteudo2>
+            <span style="color: red;">
+                <h3>Sem itens para exibir ...</h3>
+            </span>
+        </Conteudo2>
+    </Aviso>
+}
+else
+{
+    <ul class="list-group">
+        @foreach (var item in Itens)
+        {
+            <li class="list-group-item">
+                @ItemTemplate(item)
+            </li>
+        }
+    </ul>
+}
+
+@code {
+    [Parameter, EditorRequired]
+    public IEnumerable<TItem> Itens { get; set; } = [];
+    
+    [Parameter, EditorRequired] 
+    public RenderFragment<TItem> ItemTemplate { get; set; }
+}

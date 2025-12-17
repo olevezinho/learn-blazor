@@ -1,0 +1,32 @@
+@page "/bind"
+@rendermode InteractiveServer
+
+<h4>Bind - exemplo com <strong>campo (field)</strong> e <strong>propriedade (property)</strong></h4>
+<p>
+    <label>
+        Campo: <input @bind="campo"/>
+    </label>
+</p>
+
+<p>
+    <label>
+        Propriedade: <input @bind="Propriedade"/>
+    </label>
+</p>
+
+<ul>
+    <li><code>campo</code>: @campo</li>
+    <li><code>propriedade</code>: @Propriedade</li>
+</ul>
+
+@code 
+{
+    private string campo;
+    // private string Propriedade { get; set; }
+    private string propriedade;
+    private string Propriedade
+    {
+        get => propriedade;
+        set => propriedade = value.ToUpper();
+    }
+}

@@ -1,0 +1,94 @@
+@page "/contactos/edit"
+@using Microsoft.EntityFrameworkCore
+@using BlazorAppDockerSqlServer.Data
+@inject IDbContextFactory<BlazorAppDockerSqlServer.Data.ApplicationDbContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Edit</PageTitle>
+
+<h1>Edit</h1>
+
+<h2>Contacto</h2>
+<hr />
+@if (Contacto is null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="row">
+        <div class="col-md-4">
+            <EditForm method="post" Model="Contacto" OnValidSubmit="UpdateContacto" FormName="edit" Enhance>
+                <DataAnnotationsValidator />
+                <ValidationSummary role="alert"/>
+                <input type="hidden" name="Contacto.Id" value="@Contacto.Id" />
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome:</label>
+                    <InputText id="nome" @bind-Value="Contacto.Nome" class="form-control" />
+                    <ValidationMessage For="() => Contacto.Nome" class="text-danger" />
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <InputText id="email" @bind-Value="Contacto.Email" class="form-control" />
+                    <ValidationMessage For="() => Contacto.Email" class="text-danger" />
+                </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </EditForm>
+        </div>
+    </div>
+}
+
+<div>
+    <a href="/contactos">Back to List</a>
+</div>
+
+@code {
+    [SupplyParameterFromQuery]
+    private int Id { get; set; }
+
+    [SupplyParameterFromForm]
+    private Contacto? Contacto { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        Contacto ??= await context.Contactos.FirstOrDefaultAsync(m => m.Id == Id);
+
+        if (Contacto is null)
+        {
+            NavigationManager.NotFound();
+        }
+    }
+
+    // To protect from overposting attacks, enable the specific properties you want to bind to.
+    // For more information, see https://learn.microsoft.com/aspnet/core/blazor/forms/#mitigate-overposting-attacks.
+    private async Task UpdateContacto()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Attach(Contacto!).State = EntityState.Modified;
+
+        try
+        {
+            await context.SaveChangesAsync();
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            if (!ContactoExists(Contacto!.Id))
+            {
+                NavigationManager.NotFound();
+            }
+            else
+            {
+                throw;
+            }
+        }
+
+        NavigationManager.NavigateTo("/contactos");
+    }
+
+    private bool ContactoExists(int id)
+    {
+        using var context = DbFactory.CreateDbContext();
+        return context.Contactos.Any(e => e.Id == id);
+    }
+}

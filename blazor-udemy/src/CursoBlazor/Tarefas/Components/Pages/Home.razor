@@ -1,0 +1,82 @@
+﻿@page "/"
+@rendermode InteractiveServer
+@inject HttpClient httpClient
+@inject NavigationManager navigationManager
+
+<PageTitle>Home</PageTitle>
+<Painel>
+    <Aviso>
+        <Conteudo1>Lista de tarefas</Conteudo1>
+    </Aviso>
+    <ListaTarefas ListaDeTarefas="_tarefas" OnRemoverTarefa="RemoveTarefa"></ListaTarefas>
+</Painel>
+
+
+@if (_tarefas is not null)
+{
+    <Painel>
+        <MudPaper Class="pa-4">
+            <MudForm @ref="form" @bind-IsValid="@success" @bind-Errors="@errors">
+                <MudTextField T="string" @bind-Value="_novaTarefa" Label="Tarefa" Required="true" RequiredError="Descrição da tarefa obrigatória!"/>
+                <div class="d-flex align-center justify-space-between">
+                    <MudButton OnClick="AdicionarNovaTarefa"
+                               Variant="Variant.Filled"
+                               Disabled="@(!success)"
+                               Class="ml-auto">
+                        <MudIcon Icon="@Icons.Material.Filled.AddBox" Size="Size.Small"/>
+                        Registar Tarefa
+                    </MudButton>
+                </div>
+            </MudForm>
+        </MudPaper>
+    </Painel>
+}
+
+@code
+{
+    // Lista
+    List<Tarefa> _tarefas = [];
+    private string _novaTarefa = string.Empty;
+    private bool dense = false;
+    private bool hover = true;
+    private bool striped = false;
+    private bool bordered = true;
+    // Form
+    bool success;
+    string[] errors = { };
+    MudForm form;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Obter a lista de tarefas a partir de uma API ou serviço
+        await SimulaCarregarTarefas();
+        var url = navigationManager.BaseUri + "Dados/tarefas.json";
+        var resultado = await httpClient.GetFromJsonAsync<List<Tarefa>>(url);
+        _tarefas = resultado ?? [];
+    }
+
+    private async Task SimulaCarregarTarefas()
+    {
+        await Task.Delay(500); // Simula um atraso de meio segundo
+    }
+
+    void AdicionarNovaTarefa()
+    {
+        if (!string.IsNullOrWhiteSpace(_novaTarefa))
+        {
+            _tarefas.Add(new Tarefa
+            {
+                Id = Guid.NewGuid(),
+                DataCriacao =  DateTime.Now,
+                Descricao = _novaTarefa
+            });
+            _novaTarefa = string.Empty;
+        }
+    }
+
+    private void RemoveTarefa(Guid tarefaId)
+    {
+        _tarefas.Remove(_tarefas.First(x => x.Id == tarefaId));
+    }
+}
+
