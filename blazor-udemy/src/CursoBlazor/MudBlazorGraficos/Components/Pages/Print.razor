@@ -1,0 +1,19 @@
+@page "/print"
+@inject IJSRuntime jsRuntime
+
+<h3>A imprimir ...</h3>
+
+<MudIcon @Icon="@Icons.Material.Filled.LocalPrintshop" Size="Size.Large" Color="Color.Inherit" />
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        await PrintFuncionarios();
+    }
+
+    private async Task PrintFuncionarios()
+    {
+        await jsRuntime.InvokeAsync<object>("open", new object[] { "/print-funcionarios", "_blank" });
+    }
+
+}

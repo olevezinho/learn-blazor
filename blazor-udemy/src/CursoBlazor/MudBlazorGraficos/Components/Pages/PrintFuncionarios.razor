@@ -1,0 +1,41 @@
+@using MudBlazorGraficos.Components.Layout
+@layout BlankLayout
+@page "/print-funcionarios"
+
+<body onload="window.print()">
+    <br/>
+    <br/>
+    <h3>Funcionários</h3>
+    <br/>
+    <br/>
+    @if (funcionarios is null)
+    {
+        <MudProgressCircular Color="Color.Default" Indeterminate="true" />
+    }
+    else
+    {
+        <MudTable Items="funcionarios" Striped="true" Hover="true">
+            <HeaderContent>
+                <MudTh>Nome</MudTh>
+                <MudTh>Cargo</MudTh>
+                <MudTh>Salário</MudTh>
+                <MudTh>Departamento</MudTh>
+            </HeaderContent>
+            <RowTemplate>
+                <MudTd DataLabel="Nome">@context.Nome</MudTd>
+                <MudTd DataLabel="Cargo">@context.Cargo</MudTd>
+                <MudTd DataLabel="Cargo">@context.Salario</MudTd>
+                <MudTd DataLabel="Departamento">@context.Departamento?.Nome</MudTd>
+            </RowTemplate>
+        </MudTable>
+    }
+</body>
+
+@code {
+    private List<Funcionario>? funcionarios;
+
+    protected override async Task OnInitializedAsync()
+    {
+        funcionarios = await DataService.GetFuncionariosAsync();
+    }
+}

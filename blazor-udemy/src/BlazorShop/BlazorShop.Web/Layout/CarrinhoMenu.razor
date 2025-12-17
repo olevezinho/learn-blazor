@@ -1,0 +1,27 @@
+@implements IDisposable
+
+<a href="carrinho" class="btn btn-info">
+    <i class="bi bi-cart"></i>&nbsp;Carrinho
+    <span class="badge bg-dark">@carrinhoCompraItemContador</span>
+</a>
+
+@code {
+    private int carrinhoCompraItemContador;
+    
+    protected override void OnInitialized()
+    {
+        CarrinhoCompraService.OnCarrinhoCompraChanged += CarrinhoCompraChanged;
+    }
+
+    private void CarrinhoCompraChanged(int totalQuantidade)
+    {
+        carrinhoCompraItemContador = totalQuantidade;
+        StateHasChanged();
+    }
+
+    public void Dispose()
+    {
+        CarrinhoCompraService.OnCarrinhoCompraChanged -= CarrinhoCompraChanged;
+    }
+
+}
