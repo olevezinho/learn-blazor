@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/BlazorCookBoop.App/">
+    <Project Path="src/BlazorCookBoop.App/BlazorCookBoop.App.Client/BlazorCookBoop.App.Client.csproj" />
+    <Project Path="src/BlazorCookBoop.App/BlazorCookBoop.App/BlazorCookBoop.App.csproj" />
+  </Folder>
+</Solution>
