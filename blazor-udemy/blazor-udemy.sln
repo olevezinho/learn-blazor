@@ -37,11 +37,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorTarefas.Shared", "src
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleRazorComponent", "src\CursoBlazor\ConsoleRazorComponent\ConsoleRazorComponent.csproj", "{3965B4D0-A394-438E-8519-732D719FCF2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorUploadsWASM", "src\CursoBlazor\BlazorUploadsWASM\BlazorUploadsWASM\BlazorUploadsWASM.csproj", "{2A14DADB-F221-4957-8DFD-E2CA73642FC1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorUploadWASM", "src\CursoBlazor\BlazorUploadsWASM\BlazorUploadWASM\BlazorWASM\BlazorUploadWASM.csproj", "{2A14DADB-F221-4957-8DFD-E2CA73642FC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorUploadsWASM.Client", "src\CursoBlazor\BlazorUploadsWASM\BlazorUploadsWASM.Client\BlazorUploadsWASM.Client.csproj", "{9870B67C-9932-48C9-8DF6-4072EF6720C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorUploadWASM.Client", "src\CursoBlazor\BlazorUploadsWASM\BlazorUploadWASM\BlazorUploadWASM.Client\BlazorUploadWASM.Client.csproj", "{9870B67C-9932-48C9-8DF6-4072EF6720C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorUploadsWASM.Shared", "src\CursoBlazor\BlazorUploadsWASM\BlazorUploadsWASM.Shared\BlazorUploadsWASM.Shared.csproj", "{3A76E081-B9DD-4093-ABEF-2A3D2377190B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorUploadWASM.Shared", "src\CursoBlazor\BlazorUploadsWASM\BlazorUploadWASM.Shared\BlazorUploadWASM.Shared.csproj", "{3A76E081-B9DD-4093-ABEF-2A3D2377190B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
