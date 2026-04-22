@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\my-blazor-app-webassembly.props" />
+</Project>

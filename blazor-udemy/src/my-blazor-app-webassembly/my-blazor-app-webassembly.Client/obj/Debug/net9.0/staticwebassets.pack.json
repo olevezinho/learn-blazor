@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\lfili\\source\\repos\\olevezinho\\learn-blazor\\blazor-udemy\\src\\my-blazor-app-webassembly\\my-blazor-app-webassembly.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\lfili\\source\\repos\\olevezinho\\learn-blazor\\blazor-udemy\\src\\my-blazor-app-webassembly\\my-blazor-app-webassembly.Client\\wwwroot\\appsettings.Development.json",
+      "PackagePath": "staticwebassets\\appsettings.Development.json"
+    },
+    {
+      "Id": "C:\\Users\\lfili\\source\\repos\\olevezinho\\learn-blazor\\blazor-udemy\\src\\my-blazor-app-webassembly\\my-blazor-app-webassembly.Client\\wwwroot\\appsettings.json",
+      "PackagePath": "staticwebassets\\appsettings.json"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.my-blazor-app-webassembly.Client.props",
+      "PackagePath": "build\\my-blazor-app-webassembly.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.my-blazor-app-webassembly.Client.props",
+      "PackagePath": "buildMultiTargeting\\my-blazor-app-webassembly.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.my-blazor-app-webassembly.Client.props",
+      "PackagePath": "buildTransitive\\my-blazor-app-webassembly.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.my-blazor-app-webassembly.Client.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.my-blazor-app-webassembly.Client.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

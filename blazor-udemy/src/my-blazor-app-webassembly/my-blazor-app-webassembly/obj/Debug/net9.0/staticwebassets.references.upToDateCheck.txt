@@ -1,0 +1,2 @@
+C:\Users\lfili\source\repos\olevezinho\learn-blazor\blazor-udemy\src\my-blazor-app-webassembly\my-blazor-app-webassembly.Client\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\lfili\source\repos\olevezinho\learn-blazor\blazor-udemy\src\my-blazor-app-webassembly\my-blazor-app-webassembly.Client\obj\Debug\net9.0\staticwebassets.build.json

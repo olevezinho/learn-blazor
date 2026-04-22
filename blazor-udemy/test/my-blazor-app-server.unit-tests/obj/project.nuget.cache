@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TiAPYqrOMlU=",
+  "dgSpecHash": "Q++4c20UwIM=",
   "success": true,
   "projectFilePath": "C:\\Users\\lfili\\source\\repos\\olevezinho\\learn-blazor\\blazor-udemy\\test\\my-blazor-app-server.unit-tests\\my-blazor-app-server.unit-tests.csproj",
   "expectedPackageFiles": [
@@ -50,7 +50,10 @@
     "C:\\Users\\lfili\\.nuget\\packages\\nunit3testadapter\\4.5.0\\nunit3testadapter.4.5.0.nupkg.sha512",
     "C:\\Users\\lfili\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512",
     "C:\\Users\\lfili\\.nuget\\packages\\system.text.encoding.codepages\\8.0.0\\system.text.encoding.codepages.8.0.0.nupkg.sha512",
-    "C:\\Users\\lfili\\.nuget\\packages\\system.text.json\\8.0.5\\system.text.json.8.0.5.nupkg.sha512"
+    "C:\\Users\\lfili\\.nuget\\packages\\system.text.json\\8.0.5\\system.text.json.8.0.5.nupkg.sha512",
+    "C:\\Users\\lfili\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.15\\microsoft.netcore.app.ref.9.0.15.nupkg.sha512",
+    "C:\\Users\\lfili\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.15\\microsoft.windowsdesktop.app.ref.9.0.15.nupkg.sha512",
+    "C:\\Users\\lfili\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.15\\microsoft.aspnetcore.app.ref.9.0.15.nupkg.sha512"
   ],
   "logs": []
 }

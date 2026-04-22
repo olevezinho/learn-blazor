@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JDc5KOcvLXY=",
+  "dgSpecHash": "axhDCVy7140=",
   "success": true,
   "projectFilePath": "C:\\Users\\lfili\\source\\repos\\olevezinho\\learn-blazor\\blazor-udemy\\src\\BlazorTarefas\\BlazorTarefas\\BlazorTarefas.csproj",
   "expectedPackageFiles": [
@@ -27,7 +27,11 @@
     "C:\\Users\\lfili\\.nuget\\packages\\microsoft.extensions.options\\9.0.3\\microsoft.extensions.options.9.0.3.nupkg.sha512",
     "C:\\Users\\lfili\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.3\\microsoft.extensions.primitives.9.0.3.nupkg.sha512",
     "C:\\Users\\lfili\\.nuget\\packages\\microsoft.jsinterop\\9.0.3\\microsoft.jsinterop.9.0.3.nupkg.sha512",
-    "C:\\Users\\lfili\\.nuget\\packages\\microsoft.jsinterop.webassembly\\9.0.3\\microsoft.jsinterop.webassembly.9.0.3.nupkg.sha512"
+    "C:\\Users\\lfili\\.nuget\\packages\\microsoft.jsinterop.webassembly\\9.0.3\\microsoft.jsinterop.webassembly.9.0.3.nupkg.sha512",
+    "C:\\Users\\lfili\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.15\\microsoft.netcore.app.ref.9.0.15.nupkg.sha512",
+    "C:\\Users\\lfili\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.15\\microsoft.windowsdesktop.app.ref.9.0.15.nupkg.sha512",
+    "C:\\Users\\lfili\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.15\\microsoft.aspnetcore.app.ref.9.0.15.nupkg.sha512",
+    "C:\\Users\\lfili\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\9.0.15\\microsoft.netcore.app.host.win-x64.9.0.15.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,5 +1,10 @@
 is_global = true
+build_property.MudDebugAnalyzer = 
+build_property.MudAllowedAttributePattern = 
+build_property.MudAllowedAttributeList = 
 build_property.TargetFramework = net9.0
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v9.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
@@ -24,16 +29,8 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lfili/source/repos/olevezinho/learn-blazor/blazor-udemy/src/my-blazor-app-webassembly/my-blazor-app-webassembly/Components/Pages/Error.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/lfili/source/repos/olevezinho/learn-blazor/blazor-udemy/src/my-blazor-app-webassembly/my-blazor-app-webassembly/Components/Pages/Home.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/lfili/source/repos/olevezinho/learn-blazor/blazor-udemy/src/my-blazor-app-webassembly/my-blazor-app-webassembly/Components/Pages/Weather.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
+[C:/Users/lfili/source/repos/olevezinho/learn-blazor/blazor-udemy/src/my-blazor-app-webassembly/my-blazor-app-webassembly/Components/Layout/CustomLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcQ3VzdG9tTGF5b3V0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/lfili/source/repos/olevezinho/learn-blazor/blazor-udemy/src/my-blazor-app-webassembly/my-blazor-app-webassembly/Components/Routes.razor]
@@ -44,10 +41,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/lfili/source/repos/olevezinho/learn-blazor/blazor-udemy/src/my-blazor-app-webassembly/my-blazor-app-webassembly/Components/Layout/MainLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-efs97myjyt
-
-[C:/Users/lfili/source/repos/olevezinho/learn-blazor/blazor-udemy/src/my-blazor-app-webassembly/my-blazor-app-webassembly/Components/Layout/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-gpchbv4xm4
+[C:/Users/lfili/source/repos/olevezinho/learn-blazor/blazor-udemy/src/my-blazor-app-webassembly/my-blazor-app-webassembly/Components/Pages/CustomPage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDdXN0b21QYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-2y11jewxny

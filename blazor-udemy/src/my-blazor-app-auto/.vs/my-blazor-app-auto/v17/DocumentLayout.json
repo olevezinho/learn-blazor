@@ -1,0 +1,61 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lfili\\source\\repos\\olevezinho\\learn-blazor\\blazor-udemy\\src\\my-blazor-app-auto\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{169AFEBB-DC62-4E8C-9589-2A6BD8A83225}|my-blazor-app-auto\\my-blazor-app-auto.csproj|c:\\users\\lfili\\source\\repos\\olevezinho\\learn-blazor\\blazor-udemy\\src\\my-blazor-app-auto\\my-blazor-app-auto\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{169AFEBB-DC62-4E8C-9589-2A6BD8A83225}|my-blazor-app-auto\\my-blazor-app-auto.csproj|solutionrelative:my-blazor-app-auto\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{169AFEBB-DC62-4E8C-9589-2A6BD8A83225}|my-blazor-app-auto\\my-blazor-app-auto.csproj|c:\\users\\lfili\\source\\repos\\olevezinho\\learn-blazor\\blazor-udemy\\src\\my-blazor-app-auto\\my-blazor-app-auto\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{169AFEBB-DC62-4E8C-9589-2A6BD8A83225}|my-blazor-app-auto\\my-blazor-app-auto.csproj|solutionrelative:my-blazor-app-auto\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\lfili\\source\\repos\\olevezinho\\learn-blazor\\blazor-udemy\\src\\my-blazor-app-auto\\my-blazor-app-auto\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "my-blazor-app-auto\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\lfili\\source\\repos\\olevezinho\\learn-blazor\\blazor-udemy\\src\\my-blazor-app-auto\\my-blazor-app-auto\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "my-blazor-app-auto\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-21T20:58:17.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\lfili\\source\\repos\\olevezinho\\learn-blazor\\blazor-udemy\\src\\my-blazor-app-auto\\my-blazor-app-auto\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "my-blazor-app-auto\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\lfili\\source\\repos\\olevezinho\\learn-blazor\\blazor-udemy\\src\\my-blazor-app-auto\\my-blazor-app-auto\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "my-blazor-app-auto\\Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-21T20:58:16.443Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

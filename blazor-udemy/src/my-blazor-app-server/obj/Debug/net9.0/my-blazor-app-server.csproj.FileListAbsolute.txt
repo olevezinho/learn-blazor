@@ -12,6 +12,7 @@ C:\Users\lfili\source\repos\olevezinho\learn-blazor\blazor-udemy\src\my-blazor-a
 C:\Users\lfili\source\repos\olevezinho\learn-blazor\blazor-udemy\src\my-blazor-app-server\obj\Debug\net9.0\my-blazor-app-server.AssemblyInfo.cs
 C:\Users\lfili\source\repos\olevezinho\learn-blazor\blazor-udemy\src\my-blazor-app-server\obj\Debug\net9.0\my-blazor-app-server.csproj.CoreCompileInputs.cache
 C:\Users\lfili\source\repos\olevezinho\learn-blazor\blazor-udemy\src\my-blazor-app-server\obj\Debug\net9.0\my-blazor-app-server.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\lfili\source\repos\olevezinho\learn-blazor\blazor-udemy\src\my-blazor-app-server\obj\Debug\net9.0\my-blazor-app-server.sourcelink.json
 C:\Users\lfili\source\repos\olevezinho\learn-blazor\blazor-udemy\src\my-blazor-app-server\obj\Debug\net9.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
 C:\Users\lfili\source\repos\olevezinho\learn-blazor\blazor-udemy\src\my-blazor-app-server\obj\Debug\net9.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
 C:\Users\lfili\source\repos\olevezinho\learn-blazor\blazor-udemy\src\my-blazor-app-server\obj\Debug\net9.0\scopedcss\bundle\my-blazor-app-server.styles.css
